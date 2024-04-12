@@ -4,4 +4,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'hello this is Home page!'
+    return 'this is Home page!'
+
+from mod_admin import admin
+
+app.register_blueprint(admin)
